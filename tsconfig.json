@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./lib/",
+    "module": "CommonJS",
+    // "lib": ["dom", "esnext"],
+    "target": "ES6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    // "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    // "isolatedModules": true,
+    "strict": true,
+    "types": ["node"]
+  },
+  "include": ["./src/**/*", "src/main.mjs"],
+  "exclude": ["node_modules", "lib"]
+}
