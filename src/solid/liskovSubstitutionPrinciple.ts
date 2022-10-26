@@ -1,4 +1,6 @@
 /**
+ * To build system with interchangeable parts, those parts must follow the contract to be substituted one for another
+ * 
  * Подклассы должны дополнять, а не замещать поведение базового класса.
  *
  * 1) Типы параметров метода подкласса должны совпадать или быть боле абстрактными, чем типы параметров базового метода.
