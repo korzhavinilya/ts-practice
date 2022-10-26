@@ -6,7 +6,7 @@
     "json:server": "json-server --watch ./src/modules/json-server/index.js",
     "json:server:remote": "json-server http://jsonplaceholder.typicode.com/db",
     "start": "nodemon ./src/index.ts",
-    "start:js": "nodemon ./src/main.js",
+    "start:js": "nodemon ./src/index.js",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
     "test": "nodemon ./src/test.ts",
