@@ -78,6 +78,22 @@ export namespace LinkedListNamespace {
       }
     }
 
+    reverse() {
+      if (this.head) {
+        let prev: Node | undefined = undefined;
+        let current: Node | undefined = this.head;
+        let next: Node | undefined = undefined;
+
+        while (current) {
+          next = current.next;
+          current.next = prev;
+          prev = current;
+          current = next;
+        }
+        this.head = prev;
+      }
+    }
+
     print() {
       if (!this.head) {
         console.log(null);
@@ -94,21 +110,25 @@ export namespace LinkedListNamespace {
     }
   }
 
-  export function main() {
-    const list = new LinkedList();
-    // list.push(3);
-    // list.push(4);
-    // list.unshift(2);
-    // list.unshift(1);
-    // list.shift();
-    // list.pop();
-    list.push(1);
-    list.push(4);
-    list.push(1);
-    list.push(4);
-    list.push(1);
-    list.push(4);
-    list.removeDuplicates();
-    list.print();
-  }
+  const list = new LinkedList();
+  // list.push(3);
+  // list.push(4);
+  // list.unshift(2);
+  // list.unshift(1);
+  // list.shift();
+  // list.pop();
+  // list.push(1);
+  // list.push(4);
+  // list.push(1);
+  // list.push(4);
+  // list.push(1);
+  // list.push(4);
+  // list.removeDuplicates();
+
+  list.push(1);
+  list.push(2);
+  list.push(3);
+  list.reverse();
+
+  list.print();
 }
