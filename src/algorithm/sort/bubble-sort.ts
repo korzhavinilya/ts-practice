@@ -1,4 +1,4 @@
-import { swap } from "../utils/swap";
+import { swap } from '../utils/swap';
 
 // O(n^2)
 
@@ -12,7 +12,7 @@ function bubbleSort<T>(array: T[]) {
       count += 1;
     }
   }
-  console.log("count", count);
+  console.log('count', count);
   return array;
 }
 

@@ -1,4 +1,4 @@
-import { swap } from "../utils/swap";
+import { swap } from '../utils/swap';
 
 // O(1/2 n^2) => O(n^2)
 
@@ -16,7 +16,7 @@ function selectionSort<T>(array: T[]) {
       swap(array, i, indexMin);
     }
   }
-  console.log("count", count);
+  console.log('count', count);
   return array;
 }
 

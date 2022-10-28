@@ -5,10 +5,10 @@ function quickSort<T>(array: T[]) {
     return array;
   }
 
-  let pivotIndex = Math.floor(array.length / 2);
-  let pivot = array[pivotIndex];
-  let less: T[] = [];
-  let greater: T[] = [];
+  const pivotIndex = Math.floor(array.length / 2);
+  const pivot = array[pivotIndex];
+  const less: T[] = [];
+  const greater: T[] = [];
 
   for (let i = 0; i < array.length; i++) {
     if (i === pivotIndex) {
