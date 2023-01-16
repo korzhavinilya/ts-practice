@@ -1,5 +1,5 @@
-import BelarusTransportFactory from './BelarusTransportFactory';
-import RussuaTransportFactory from './RussuaTransportFactory';
+import BelarusianTransportFactory from './BelarusianTransportFactory';
+import RussiaTransportFactory from './RussianTransportFactory';
 import TransportFactory from './TransportFactory';
 
 const requirements = 'belarus';
@@ -7,9 +7,9 @@ const requirements = 'belarus';
 let transportFactory: TransportFactory;
 
 if (requirements === 'belarus') {
-  transportFactory = new BelarusTransportFactory();
+  transportFactory = new BelarusianTransportFactory();
 } else {
-  transportFactory = new RussuaTransportFactory();
+  transportFactory = new RussiaTransportFactory();
 }
 
 transportFactory.createShip().deliver();

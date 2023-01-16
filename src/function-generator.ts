@@ -1,6 +1,7 @@
 function* generateId() {
   let id = 1;
   while (true) {
+    // The yield operator is used to pause and resume a generator function.
     const increment = yield id;
     console.log('INCREMENT', increment);
 

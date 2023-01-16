@@ -1,12 +1,10 @@
 export namespace LinkedListNamespace {
   class Node {
-    prev?: Node;
     next?: Node;
     value: number;
 
-    constructor(value: number, prev?: Node, next?: Node) {
+    constructor(value: number, next?: Node) {
       this.value = value;
-      this.prev = prev;
       this.next = next;
     }
   }
@@ -108,6 +106,37 @@ export namespace LinkedListNamespace {
         console.log(values);
       }
     }
+
+    search(value: number) {
+      // return this.searchRecursive(this.head, value);
+      return this.searchIterative(value);
+    }
+
+    searchRecursive(node: Node | undefined, value: number) {
+      if (!node) {
+        return null;
+      }
+
+      if (node.value === value) {
+        return node;
+      }
+
+      return this.searchRecursive(node.next, value);
+    }
+
+    searchIterative(value: number) {
+      let current = this.head;
+
+      while (current) {
+        if (current.value === value) {
+          return current;
+        }
+
+        current = current.next;
+      }
+
+      return current;
+    }
   }
 
   const list = new LinkedList();
@@ -128,7 +157,11 @@ export namespace LinkedListNamespace {
   list.push(1);
   list.push(2);
   list.push(3);
-  list.reverse();
+  // list.reverse();
 
-  list.print();
+  console.log(list.search(3));
+
+  console.dir(list.head, { depth: 999 });
+
+  // list.print();
 }

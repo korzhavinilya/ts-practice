@@ -1,0 +1,1 @@
+// Граница слова \b https://learn.javascript.ru/regexp-boundary

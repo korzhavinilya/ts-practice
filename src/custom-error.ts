@@ -1,13 +1,21 @@
-export class NotEnoughCoffeeError extends Error {
-  constructor(message: string, public foo: number) {
+export class HttpError extends Error {
+  status: number;
+  errors: string[];
+
+  constructor(status: number, message: string, errors: string[] = []) {
     super(message);
+    this.status = status;
+    this.errors = errors;
+  }
+
+  static BadRequest(message: string) {
+    return new HttpError(400, message);
+  }
+
+  static UnauthorizedError() {
+    return new HttpError(401, "User isn't authorized");
   }
 }
 
-try {
-  throw new NotEnoughCoffeeError('Hello', 1);
-} catch (error: NotEnoughCoffeeError | any) {
-  const { message, foo } = error;
-  console.log('message', message);
-  console.log('foo', foo);
-}
+const error1 = HttpError.BadRequest('Invalid token');
+const error2 = HttpError.UnauthorizedError();

@@ -3,11 +3,11 @@ const obj = {
   foo: 'bar',
 };
 
-Object.defineProperty(obj, 'name', {
+Object.defineProperty(objectt, 'name', {
   value: 'Вася',
   writable: false,
   configurable: true,
   enumerable: true,
 });
 
-obj.name = 'Петя';
+objectt.name = 'Петя';

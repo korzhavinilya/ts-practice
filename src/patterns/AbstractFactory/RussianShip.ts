@@ -1,7 +1,7 @@
 import Transport from '../FactoryMethod/interfaces/transport.interface';
 
-export default class RussiaTruck implements Transport {
+export default class RussianShip implements Transport {
   deliver(): void {
-    console.log('RussiaTruck delivering');
+    console.log('Russian Ship delivering');
   }
 }
